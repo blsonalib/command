@@ -1,0 +1,22 @@
+
+
+#!/bin/bash
+for file in `ls *.txt`
+do
+	folderName=`echo $file | awk -F '.' '{print $1}'`
+
+	if [ -d $folderName ]
+	then
+		rm -rf $folderName
+	fi
+	echo"append date"
+	echo $folderName
+	date=date +%d%m%y;
+	cp $date $folderName
+	echo "Make dir"
+ 	mkdir $folderName
+	echo "copy files"
+	cp $file $folderName
+done
+
+
