@@ -1,7 +1,7 @@
 
 #!/bin/bash -x
-present =$((RANDOM%10));
-if[$present -gt 0]
+ispresent =$((RANDOM%10));
+if[$ispresent -gt 0]
 then
 read -p "Enter Employee wags per day " w
 read -p "Enter employee hours" h
